@@ -10,13 +10,16 @@ from datetime import datetime
 from appium import webdriver
 from TKIOSAutoDownLoadApp.desired_capabilities import get_desired_capabilities
 
+executor = ThreadPoolExecutor(6)
+
 
 def runnerPool(getDevices):
     for i in range(0, len(getDevices)):
         udid = getDevices[i]['devices']
         app = getDevices[i]["app"]
         port = getDevices[i]["port"]
-        driver = executor.submit(get_desired_capabilities(udid, app, str(port)))
+        bport = getDevices[i]["bport"]
+        driver = executor.submit(get_desired_capabilities(udid, app, str(port), str(bport)))
 
 
 def runnerCaseApp(devicess):
@@ -24,12 +27,10 @@ def runnerCaseApp(devicess):
     suite.addTest(mainAppTest_01())
     unittest.TextTestRunner(verbosity=2).run(suite)
 
-
 def mainAppTest_01(self):
     pass
 
 
-executor = ThreadPoolExecutor(6)
 if __name__ == '__main__':
     devicess = get_ios_devices()
     print(devicess)
@@ -44,5 +45,5 @@ if __name__ == '__main__':
             l_devices.append(app)
         appium_server = AppiumServer(l_devices)
         appium_server.start_server()
-        time.sleep(5)
+        print('没有执行到这里')
         runnerPool(l_devices)

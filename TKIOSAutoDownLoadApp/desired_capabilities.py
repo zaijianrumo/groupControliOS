@@ -5,7 +5,7 @@ from appium import webdriver
 from TKIOSAutoDownLoadApp.baseIosPhone import *
 
 
-def get_desired_capabilities(udid, app, port):
+def get_desired_capabilities(udid, app, port, lport):
     desired_caps = {
         # 平台名称
         'platformName': "iOS",
@@ -27,8 +27,11 @@ def get_desired_capabilities(udid, app, port):
         "xcodeSigningId": "iPhone Developer",
 
         'xcodeOrgId': "XH3Y936B53",
+
+        # 'wdaLocalPort': int(lport)
     }
-    remote_url = 'http://127.0.0.1:' + port + '/wd/hub'
-    print('remote_url:{}'.format(remote_url))
+    print('参数:{}'.format(desired_caps))
+    remote_url = 'http://127.0.0.1:' + "4723" + '/wd/hub'
+    print(remote_url)
     driver = webdriver.Remote(remote_url, desired_caps)
     return driver
