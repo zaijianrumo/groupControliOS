@@ -61,7 +61,7 @@ class AppiumServer:
         now_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
         cmd_appium = "appium --session-override  -p %s --webdriveragent-port %s --device-name %s" % (
             port, bport, udid)
-        appiumlog = open(udid + '_log.txt', 'w')
+        appiumlog = open(now_time + udid + 'log.txt', 'w')
         try:
             # 启动appium服务
             subprocess.Popen(cmd_appium, shell=True, stdout=appiumlog)
