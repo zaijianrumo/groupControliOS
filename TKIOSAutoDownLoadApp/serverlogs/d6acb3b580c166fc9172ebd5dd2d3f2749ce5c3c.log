@@ -1,0 +1,78 @@
+2022-03-11 10:18:19:530 [Appium] Welcome to Appium v1.22.2
+2022-03-11 10:18:19:531 [Appium] Non-default server args:
+2022-03-11 10:18:19:531 [Appium]   port: 4853
+2022-03-11 10:18:19:531 [Appium]   sessionOverride: true
+2022-03-11 10:18:19:531 [Appium]   logFile: ./serverlogs/d6acb3b580c166fc9172ebd5dd2d3f2749ce5c3c.log
+2022-03-11 10:18:19:532 [Appium]   udid: d6acb3b580c166fc9172ebd5dd2d3f2749ce5c3c
+2022-03-11 10:18:19:532 [Appium] Deprecated server args:
+2022-03-11 10:18:19:532 [Appium]   -U => --default-capabilities
+2022-03-11 10:18:19:533 [Appium] Default capabilities, which will be added to each request unless overridden by desired capabilities:
+2022-03-11 10:18:19:533 [Appium]   udid: d6acb3b580c166fc9172ebd5dd2d3f2749ce5c3c
+2022-03-11 10:18:19:551 [Appium] Appium REST http interface listener started on 0.0.0.0:4853
+2022-03-11 10:18:23:097 [HTTP] Request idempotency key: fecb4395-3a49-414c-a970-68238111bc82
+2022-03-11 10:18:23:109 [HTTP] --> POST /wd/hub/session
+2022-03-11 10:18:23:109 [HTTP] {"capabilities":{"alwaysMatch":{"platformName":"iOS","appium:platformVersion":"12.5.5","appium:deviceName":"iPhone哈哈哈哈哈哈","appium:app":"com.apple.AppStore","appium:udid":"d6acb3b580c166fc9172ebd5dd2d3f2749ce5c3c","appium:noReset":true,"appium:newCommandTimeout":600,"appium:automationName":"XCUITest","appium:xcodeSigningId":"iPhone Developer","appium:xcodeOrgId":"XH3Y936B53","appium:autoLaunch":true,"appium:clearSystemFiles":true},"firstMatch":[{}]},"desiredCapabilities":{"platformName":"iOS","platformVersion":"12.5.5","deviceName":"iPhone哈哈哈哈哈哈","app":"com.apple.AppStore","udid":"d6acb3b580c166fc9172ebd5dd2d3f2749ce5c3c","noReset":true,"newCommandTimeout":600,"automationName":"XCUITest","xcodeSigningId":"iPhone Developer","xcodeOrgId":"XH3Y936B53","autoLaunch":true,"clearSystemFiles":true}}
+2022-03-11 10:18:23:110 [W3C] Calling AppiumDriver.createSession() with args: [{"platformName":"iOS","platformVersion":"12.5.5","deviceName":"iPhone哈哈哈哈哈哈","app":"com.apple.AppStore","udid":"d6acb3b580c166fc9172ebd5dd2d3f2749ce5c3c","noReset":true,"newCommandTimeout":600,"automationName":"XCUITest","xcodeSigningId":"iPhone Developer","xcodeOrgId":"XH3Y936B53","autoLaunch":true,"clearSystemFiles":true},null,{"alwaysMatch":{"platformName":"iOS","appium:platformVersion":"12.5.5","appium:deviceName":"iPhone哈哈哈哈哈哈","appium:app":"com.apple.AppStore","appium:udid":"d6acb3b580c166fc9172ebd5dd2d3f2749ce5c3c","appium:noReset":true,"appium:newCommandTimeout":600,"appium:automationName":"XCUITest","appium:xcodeSigningId":"iPhone Developer","appium:xcodeOrgId":"XH3Y936B53","appium:autoLaunch":true,"appium:clearSystemFiles":true},"firstMatch":[{}]}]
+2022-03-11 10:18:23:111 [BaseDriver] Event 'newSessionRequested' logged at 1646993903111 (18:18:23 GMT+0800 (China Standard Time))
+2022-03-11 10:18:23:539 [Appium] Appium v1.22.2 creating new XCUITestDriver (v3.59.0) session
+2022-03-11 10:18:23:540 [Appium] There are no active sessions for cleanup
+2022-03-11 10:18:23:544 [BaseDriver] W3C capabilities and MJSONWP desired capabilities were provided
+2022-03-11 10:18:23:545 [BaseDriver] Creating session with W3C capabilities: {
+2022-03-11 10:18:23:545 [BaseDriver]   "alwaysMatch": {
+2022-03-11 10:18:23:545 [BaseDriver]     "platformName": "iOS",
+2022-03-11 10:18:23:545 [BaseDriver]     "appium:platformVersion": "12.5.5",
+2022-03-11 10:18:23:546 [BaseDriver]     "appium:deviceName": "iPhone哈哈哈哈哈哈",
+2022-03-11 10:18:23:546 [BaseDriver]     "appium:app": "com.apple.AppStore",
+2022-03-11 10:18:23:546 [BaseDriver]     "appium:udid": "d6acb3b580c166fc9172ebd5dd2d3f2749ce5c3c",
+2022-03-11 10:18:23:546 [BaseDriver]     "appium:noReset": true,
+2022-03-11 10:18:23:546 [BaseDriver]     "appium:newCommandTimeout": 600,
+2022-03-11 10:18:23:546 [BaseDriver]     "appium:automationName": "XCUITest",
+2022-03-11 10:18:23:546 [BaseDriver]     "appium:xcodeSigningId": "iPhone Developer",
+2022-03-11 10:18:23:546 [BaseDriver]     "appium:xcodeOrgId": "XH3Y936B53",
+2022-03-11 10:18:23:547 [BaseDriver]     "appium:autoLaunch": true,
+2022-03-11 10:18:23:547 [BaseDriver]     "appium:clearSystemFiles": true
+2022-03-11 10:18:23:547 [BaseDriver]   },
+2022-03-11 10:18:23:548 [BaseDriver]   "firstMatch": [
+2022-03-11 10:18:23:548 [BaseDriver]     {}
+2022-03-11 10:18:23:548 [BaseDriver]   ]
+2022-03-11 10:18:23:549 [BaseDriver] }
+2022-03-11 10:18:23:563 [BaseDriver] Session created with session id: 8da04270-e43d-4fb7-a672-d669a3667d10
+2022-03-11 10:18:23:584 [XCUITest] Current user: 'taken'
+2022-03-11 10:18:23:608 [XCUITest] Available devices: 00008101-001A405436C2001E, e78cdc38581092179c4b3cfc28ade49cea3a1370, d6acb3b580c166fc9172ebd5dd2d3f2749ce5c3c
+2022-03-11 10:18:23:608 [XCUITest] Creating iDevice object with udid 'd6acb3b580c166fc9172ebd5dd2d3f2749ce5c3c'
+2022-03-11 10:18:23:608 [XCUITest] Determining device to run tests on: udid: 'd6acb3b580c166fc9172ebd5dd2d3f2749ce5c3c', real device: true
+2022-03-11 10:18:23:609 [XCUITest] Normalized platformVersion capability value '12.5.5' to '12.5'
+2022-03-11 10:18:23:657 [BaseDriver] Event 'xcodeDetailsRetrieved' logged at 1646993903656 (18:18:23 GMT+0800 (China Standard Time))
+2022-03-11 10:18:23:658 [XCUITest] App is an iOS bundle, will attempt to run as pre-existing
+2022-03-11 10:18:23:658 [BaseDriver] Event 'appConfigured' logged at 1646993903658 (18:18:23 GMT+0800 (China Standard Time))
+2022-03-11 10:18:23:658 [BaseDriver] Event 'resetStarted' logged at 1646993903658 (18:18:23 GMT+0800 (China Standard Time))
+2022-03-11 10:18:23:658 [XCUITest] Reset: fullReset not set. Leaving as is
+2022-03-11 10:18:23:659 [BaseDriver] Event 'resetComplete' logged at 1646993903658 (18:18:23 GMT+0800 (China Standard Time))
+2022-03-11 10:18:23:659 [WebDriverAgent] Using WDA path: '/usr/local/lib/node_modules/appium/node_modules/appium-webdriveragent'
+2022-03-11 10:18:23:659 [WebDriverAgent] Using WDA agent: '/usr/local/lib/node_modules/appium/node_modules/appium-webdriveragent/WebDriverAgent.xcodeproj'
+2022-03-11 10:18:23:917 [XCUITest] Crash reports root '/Users/taken/Library/Logs/CrashReporter/MobileDevice/iPhone哈哈哈哈哈哈' does not exist. Got nothing to gather.
+2022-03-11 10:18:23:917 [BaseDriver] Event 'logCaptureStarted' logged at 1646993903917 (18:18:23 GMT+0800 (China Standard Time))
+2022-03-11 10:18:23:918 [XCUITest] Setting up real device
+2022-03-11 10:18:24:212 [WebDriverAgent] No obsolete cached processes from previous WDA sessions listening on port 8100 have been found
+2022-03-11 10:18:24:213 [DevCon Factory] Requesting connection for device d6acb3b580c166fc9172ebd5dd2d3f2749ce5c3c on local port 8100, device port 8100
+2022-03-11 10:18:24:213 [DevCon Factory] Cached connections count: 0
+2022-03-11 10:18:24:223 [DevCon Factory] Port #8100 is busy. Did you quit the previous driver session(s) properly?
+2022-03-11 10:18:24:224 [XCUITest] {}
+2022-03-11 10:18:24:225 [DevCon Factory] Releasing connections for d6acb3b580c166fc9172ebd5dd2d3f2749ce5c3c device on any port number
+2022-03-11 10:18:24:226 [DevCon Factory] No cached connections have been found
+2022-03-11 10:18:30:193 [WebDriverAgent] Parsed BUILD_DIR configuration value: '/Users/taken/Library/Developer/Xcode/DerivedData/WebDriverAgent-ciegwgvxzxdrqthilmrmczmqvrgu/Build/Products'
+2022-03-11 10:18:30:194 [WebDriverAgent] Got derived data root: '/Users/taken/Library/Developer/Xcode/DerivedData/WebDriverAgent-ciegwgvxzxdrqthilmrmczmqvrgu'
+2022-03-11 10:18:30:204 [XCUITest] Did not find the temporary XCTest logs root at '/var/folders/b0/3cjsvw313m362_fslvl351680000gn/T/com.apple.dt.XCTest*/'
+2022-03-11 10:18:30:205 [XCUITest] Cleaning test logs in '/Users/taken/Library/Developer/Xcode/DerivedData/WebDriverAgent-ciegwgvxzxdrqthilmrmczmqvrgu/Logs' folder
+2022-03-11 10:18:30:205 [XCUITest] Clearing log files
+2022-03-11 10:18:30:221 [XCUITest] Deleting '/Users/taken/Library/Developer/Xcode/DerivedData/WebDriverAgent-ciegwgvxzxdrqthilmrmczmqvrgu/Logs'. Freeing 48K.
+2022-03-11 10:18:30:228 [XCUITest] Finished clearing log files
+2022-03-11 10:18:30:231 [BaseDriver] Event 'newSessionStarted' logged at 1646993910231 (18:18:30 GMT+0800 (China Standard Time))
+2022-03-11 10:18:30:290 [W3C] Encountered internal error running command: Error: The port #8100 is occupied by an other process. You can either quit that process or select another free port.
+2022-03-11 10:18:30:290 [W3C]     at DeviceConnectionsFactory.requestConnection (/usr/local/lib/node_modules/appium/node_modules/appium-xcuitest-driver/lib/device-connections-factory.js:212:15)
+2022-03-11 10:18:30:290 [W3C]     at XCUITestDriver.startWda (/usr/local/lib/node_modules/appium/node_modules/appium-xcuitest-driver/lib/driver.js:545:5)
+2022-03-11 10:18:30:290 [W3C]     at XCUITestDriver.start (/usr/local/lib/node_modules/appium/node_modules/appium-xcuitest-driver/lib/driver.js:505:5)
+2022-03-11 10:18:30:290 [W3C]     at XCUITestDriver.createSession (/usr/local/lib/node_modules/appium/node_modules/appium-xcuitest-driver/lib/driver.js:255:7)
+2022-03-11 10:18:30:291 [W3C]     at AppiumDriver.createSession (/usr/local/lib/node_modules/appium/lib/appium.js:387:35)
+2022-03-11 10:18:30:307 [HTTP] <-- POST /wd/hub/session 500 7197 ms - 715
+2022-03-11 10:18:30:307 [HTTP] 
