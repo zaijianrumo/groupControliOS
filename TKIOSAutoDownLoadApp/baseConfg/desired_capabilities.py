@@ -1,8 +1,7 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-import sys
 from appium import webdriver
-from TKIOSAutoDownLoadApp.baseIosPhone import *
+from TKIOSAutoDownLoadApp.baseConfg.baseIosPhone import *
 import unittest
 
 globals
@@ -10,7 +9,7 @@ drivers = []
 
 
 class MyDesiredCapabilities(unittest.TestCase):
-    def get_desired_capabilities(self, udid, port, sysPort):
+    def get_desired_capabilities(self, udid, port, wdaPort):
         desired_caps = {
             # 平台名称
             'platformName': "iOS",
@@ -28,15 +27,16 @@ class MyDesiredCapabilities(unittest.TestCase):
             'newCommandTimeout': 600,
             # 自动化测试平台
             'automationName': 'XCUITest',
-            "xcodeSigningId": "iPhone Developer",
-            'xcodeOrgId': "XH3Y936B53",
+            # "xcodeSigningId": "iPhone Developer",
+            # 'xcodeOrgId': "XH3Y936B53",
             'autoLaunch': True,
             'clearSystemFiles': True,
-            # 'systemPort': sysPort
+            # 'showIOSLog': True,
+            'wdaLocalPort': wdaPort
 
         }
         print(desired_caps)
-        remote_url = 'http://127.0.0.1:' + str(port) + '/wd/hub'
+        remote_url = 'http://localhost:' + str(port) + '/wd/hub'
         print(remote_url)
         self.driver = webdriver.Remote(remote_url, desired_caps)
         self.driver.background_app(-1)

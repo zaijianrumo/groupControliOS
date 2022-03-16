@@ -1,0 +1,13 @@
+  -
+    id: 1
+    udid: "d6acb3b580c166fc9172ebd5dd2d3f2749ce5c3c"
+    port: "4723"
+    wdaport: "8100"
+    deviceName: "测试机01"
+
+  -
+    id: 2
+    udid: "e78cdc38581092179c4b3cfc28ade49cea3a1370"
+    port: "4725"
+    wdaport: "8102"
+    deviceName: "测试机机02"

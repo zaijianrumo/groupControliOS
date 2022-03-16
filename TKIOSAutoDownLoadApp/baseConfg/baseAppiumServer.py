@@ -29,7 +29,7 @@ class AppiumServer:
         """
         for i in range(0, len(self.kwargs)):
             port = self.kwargs[i]["port"]
-            bport = self.kwargs[i]["bport"]
+            bport = self.kwargs[i]["wdaPort"]
             udid = self.kwargs[i]["udid"]
             appium = multiprocessing.Process(target=self.runAppiumServer(port, bport, udid))
             self.appium_process.append(appium)
@@ -39,23 +39,20 @@ class AppiumServer:
         for appium in self.appium_process:
             appium.join()
 
+
     def runAppiumServer(self, port: str, bport: str, udid: str):
         """ start the appium server
         """
-        cmd_appium = f"appium -p %s -U %s --log ./serverlogs/%s.log --session-override" % (
+        cmd_appium = "appium -a 127.0.0.1 -p %s -U %s --log ./serverlogs/%s.log  --session-override" % (
             port, udid, udid)
-        print(cmd_appium)
         appium = subprocess.Popen(cmd_appium, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE,
                                   close_fds=True)
-        try:
-            while True:
-                appium_line = appium.stdout.readline().strip().decode()
-                if 'listener started' in appium_line or 'Error: listen' in appium_line:
-                    print("----server启动成功---")
-                    break
-        except Exception as msg:
-            print('error message:', msg)
-            raise
+        print(cmd_appium)
+        while True:
+            appium_line = appium.stdout.readline().strip().decode()
+            if 'listener started' in appium_line or 'Error: listen' in appium_line:
+                print("设备: {} 端口:{} 的服务启动成功".format(udid, port))
+                break
 
 
 def stop_server(devices: list):
