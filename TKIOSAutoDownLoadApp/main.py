@@ -1,15 +1,17 @@
 # -*- coding: utf-8 -*-
 
 import yaml
-from TKIOSAutoDownLoadApp.baseConfg.baseAppiumServer import *
-from TKIOSAutoDownLoadApp.baseConfg.desired_capabilities import *
+import subprocess
+import multiprocessing
+import unittest
+from TKIOSAutoDownLoadApp.baseConfg.tk_baseAppiumServer import *
+from TKIOSAutoDownLoadApp.baseConfg.tk_desired_capabilities import *
 
-# 构建desired进程组
+# # 构建desired进程组
 desired_process = []
 
 
 def runnerPool(getDevices):
-
     for i in range(0, len(getDevices)):
         udid = getDevices[i]['udid']
         port = getDevices[i]["port"]
@@ -23,15 +25,6 @@ def runnerPool(getDevices):
         # 等所有进程结束后关闭
     for desired in desired_process:
         desired.join()
-
-
-def runnerCaseApp(devicess):
-    suite = unittest.TestSuite()
-    suite.addTest(mainAppTest_01())
-    unittest.TextTestRunner(verbosity=2).run(suite)
-
-def mainAppTest_01(self):
-    pass
 
 
 if __name__ == '__main__':
@@ -51,8 +44,7 @@ if __name__ == '__main__':
             app["port"] = dev["port"]
             app["wdaPort"] = dev["wdaport"]
             infos.append(app)
-        appium_server = AppiumServer(infos)
-        appium_server.start_server()
+
+        appiumServier = AppiumServer(infos)
+        appiumServier.start_server()
         runnerPool(infos)
-
-

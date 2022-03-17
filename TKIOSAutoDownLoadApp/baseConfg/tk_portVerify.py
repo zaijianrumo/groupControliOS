@@ -5,7 +5,6 @@ import urllib.request
 from urllib.error import URLError
 
 # 端口验证
-
 class ServerValidation:
     # 判断端口是否被占用
     def isOpen(self, ip, port):

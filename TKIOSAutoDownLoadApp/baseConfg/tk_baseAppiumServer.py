@@ -21,7 +21,7 @@ class AppiumServer:
         cmd_appium = "killall - 9 node"
         subprocess.Popen(cmd_appium, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE,
                          close_fds=True)
-
+        time.sleep(1)
     appium_process = []  # 进程组
 
     def start_server(self):
@@ -39,7 +39,6 @@ class AppiumServer:
         for appium in self.appium_process:
             appium.join()
 
-
     def runAppiumServer(self, port: str, bport: str, udid: str):
         """ start the appium server
         """
@@ -48,21 +47,16 @@ class AppiumServer:
         appium = subprocess.Popen(cmd_appium, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE,
                                   close_fds=True)
         print(cmd_appium)
-        while True:
-            appium_line = appium.stdout.readline().strip().decode()
-            if 'listener started' in appium_line or 'Error: listen' in appium_line:
-                print("设备: {} 端口:{} 的服务启动成功".format(udid, port))
-                break
+        time.sleep(1)
 
-
-def stop_server(devices: list):
-    sysstr = platform.system()
-    if sysstr == 'Windows':
-        os.popen("taskkill /f /im node.exe")
-    else:
-        for device in devices:
-            cmd = "lsof -i :{0}".format(device)
-            plist = os.popen(cmd).readlines()
-            plisttmp = plist[1].split("    ")
-            plists = plisttmp[1].split(" ")
-            os.popen("kill -9 {0}".format(plists[0]))
+    def stop_server(self, devices: list):
+        sysstr = platform.system()
+        if sysstr == 'Windows':
+            os.popen("taskkill /f /im node.exe")
+        else:
+            for device in devices:
+                cmd = "lsof -i :{0}".format(device)
+                plist = os.popen(cmd).readlines()
+                plisttmp = plist[1].split("    ")
+                plists = plisttmp[1].split(" ")
+                os.popen("kill -9 {0}".format(plists[0]))
