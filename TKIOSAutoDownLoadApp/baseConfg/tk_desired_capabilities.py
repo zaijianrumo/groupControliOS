@@ -3,14 +3,18 @@
 from appium import webdriver
 from TKIOSAutoDownLoadApp.baseConfg.tk_baseIosPhone import *
 from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as exc
 import unittest
 from openpyxl import load_workbook, Workbook
 from TKIOSAutoDownLoadApp.proxy_ip import ProxyIp, IpInfo
 import requests
 import time
+import random
 
 # 操作目标APP
-appbundleid = "com.lxkj.youji"
+# appbundleid = "com.lxkj.youji"
+appbundleid = "com.ss.iphone.ugc.Aweme"
 
 
 class MyDesiredCapabilities:
@@ -28,7 +32,6 @@ class MyDesiredCapabilities:
             'udid': udid,
             # 是否不重新安装启动
             'noReset': True,
-            'autoAcceptAlerts': True,
             # 超时时间
             'newCommandTimeout': 600,
             # 自动化测试平台
@@ -49,16 +52,18 @@ class MyDesiredCapabilities:
         self.startTest(driver)
         return driver
 
+    runCount: int = 0
+
     def startTest(self, driver: webdriver):
         app_is_exited = driver.is_app_installed(appbundleid)
         if app_is_exited:
             # app 存在就删除
-            print("目标app存在")
+            print("%s目标app存在" % driver.capabilities["deviceName"])
             driver.remove_app(appbundleid)
-            print("已删除目标APP重新下载")
+            print("%s已删除目标APP重新下载" % driver.capabilities["deviceName"])
             self.downAppTest_01(driver)
         else:
-            print("目标APP不存在")
+            print("%s目标APP不存在" % driver.capabilities["deviceName"])
             self.downAppTest_01(driver)
 
     def downAppTest_01(self, driver: webdriver):
@@ -72,14 +77,14 @@ class MyDesiredCapabilities:
 
         driver.find_element(by=By.NAME, value="tk_autoDownloadApp").click()
 
-        time.sleep(3)
+        time.sleep(5)
         driver.find_element(by=By.NAME, value="重新下载").click()
-        print("正在下载中,请稍后")
+        print("%s正在下载中,请稍后" % driver.capabilities["deviceName"])
         # 判断app是否存在
         while True:
             time.sleep(2)
             if driver.is_app_installed(appbundleid):
-                print("目标APP下载完成")
+                print("%s目标APP下载完成" % driver.capabilities["deviceName"])
                 break
         driver.background_app(-1)
 
@@ -93,30 +98,36 @@ class MyDesiredCapabilities:
 
         # 打开目标APP
         driver.activate_app(appbundleid)
+        # time.sleep(random.randint(10, 20))
         time.sleep(3)
-        # driver.find_element(by=By.NAME, value="允许").click()
-        # time.sleep(1)
-        # driver.find_element(by=By.NAME, value="允许一次").click()
-        # time.sleep(1)
-        #
-        # time.sleep(2)
+        # 处理权限
+        self.always_allow(driver)
         driver.background_app(-1)
+        driver.terminate_app(appbundleid)
         # 上报
-        url = "http://tracking.token-ad.com/gateway/channel?tokenid=3608&subid=0&idfa=%s&ip=%s" % (idfaStr, ip_address)
+        url = "http://tracking.token-ad.com/gateway/channel?tokenid=3447&subid=2&idfa=%s&ip=%s" % (idfaStr, ip_address)
+        print("%s上报链接:%s" % (driver.capabilities["deviceName"], url))
         r = requests.get(url)
+        if r.status_code == 200:
+            print("上报成功")
         # 关闭代理
         self.close_proxyIp(driver)
 
         # 还原广告标识符
         self.reduction_idfa(driver)
         now_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
+        self.runCount = self.runCount + 1
         print('---------------------------------------------{}'.format(now_time))
-        driver.launch_app()
-        self.startTest(driver)
+        if self.runCount <= 5:
+            driver.launch_app()
+            self.startTest(driver)
+        else:
+            print("执行次数:%s" % self.runCount)
 
     def proxyIp_Change(self, driver: webdriver, ip_address, ip_port):
-        print("设置代理IP")
+        print("%s设置代理IP" % driver.capabilities["deviceName"])
         driver.activate_app('com.apple.Preferences')
+        time.sleep(2)
         driver.find_element(by=By.NAME, value='无线局域网').click()
         time.sleep(2)
         if driver.capabilities["udid"] == "d6acb3b580c166fc9172ebd5dd2d3f2749ce5c3c":
@@ -139,7 +150,7 @@ class MyDesiredCapabilities:
         driver.terminate_app('com.apple.Preferences')
 
     def close_proxyIp(self, driver: webdriver):
-        print("关闭代理IP")
+        print("%s关闭代理IP" % driver.capabilities["deviceName"])
         driver.activate_app('com.apple.Preferences')
         driver.find_element(by=By.NAME, value='无线局域网').click()
         time.sleep(2)
@@ -161,6 +172,7 @@ class MyDesiredCapabilities:
     # 还原广告标识符
     def reduction_idfa(self, driver: webdriver):
         # 隐私
+        driver.activate_app('com.apple.Preferences')
         driver.execute_script('mobile: swipe', {'direction': 'up'})
         driver.find_element(by=By.NAME, value='隐私').click()
         driver.execute_script('mobile: swipe', {'direction': 'up'})
@@ -172,3 +184,13 @@ class MyDesiredCapabilities:
         time.sleep(1)
         driver.terminate_app('com.apple.Preferences')
         driver.background_app(-1)
+
+    # 打开APP时候的权限处理
+    def always_allow(self, driver, number=3):
+        for i in range(number):
+            loc = ("name", "不允许")
+            try:
+                e = WebDriverWait(driver, 1, 0.5).until(exc.presence_of_element_located(loc))
+                e.click()
+            except:
+                pass

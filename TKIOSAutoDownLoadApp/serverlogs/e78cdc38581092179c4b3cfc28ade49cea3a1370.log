@@ -1,163 +1,64 @@
-2022-03-17 10:33:25:597 [Appium] Welcome to Appium v1.22.2
-2022-03-17 10:33:25:598 [Appium] Non-default server args:
-2022-03-17 10:33:25:598 [Appium]   address: 127.0.0.1
-2022-03-17 10:33:25:598 [Appium]   port: 4725
-2022-03-17 10:33:25:599 [Appium]   sessionOverride: true
-2022-03-17 10:33:25:599 [Appium]   logFile: ./serverlogs/e78cdc38581092179c4b3cfc28ade49cea3a1370.log
-2022-03-17 10:33:25:599 [Appium]   udid: e78cdc38581092179c4b3cfc28ade49cea3a1370
-2022-03-17 10:33:25:599 [Appium] Deprecated server args:
-2022-03-17 10:33:25:599 [Appium]   -U => --default-capabilities
-2022-03-17 10:33:25:600 [Appium] Default capabilities, which will be added to each request unless overridden by desired capabilities:
-2022-03-17 10:33:25:600 [Appium]   udid: e78cdc38581092179c4b3cfc28ade49cea3a1370
-2022-03-17 10:33:25:616 [Appium] Appium REST http interface listener started on 127.0.0.1:4725
-2022-03-17 10:33:27:333 [HTTP] Request idempotency key: e94f0725-8e45-4dbd-81c4-3403ba8712ef
-2022-03-17 10:33:27:357 [HTTP] --> POST /wd/hub/session
-2022-03-17 10:33:27:357 [HTTP] {"capabilities":{"alwaysMatch":{"platformName":"iOS","appium:platformVersion":"13.3","appium:deviceName":"测试机02","appium:app":"com.tk.getIdfa.TKIDFA","appium:udid":"e78cdc38581092179c4b3cfc28ade49cea3a1370","appium:noReset":true,"appium:autoAcceptAlerts":true,"appium:newCommandTimeout":600,"appium:automationName":"XCUITest","appium:autoLaunch":true,"appium:clearSystemFiles":true,"appium:wdaLocalPort":"8102"},"firstMatch":[{}]},"desiredCapabilities":{"platformName":"iOS","platformVersion":"13.3","deviceName":"测试机02","app":"com.tk.getIdfa.TKIDFA","udid":"e78cdc38581092179c4b3cfc28ade49cea3a1370","noReset":true,"autoAcceptAlerts":true,"newCommandTimeout":600,"automationName":"XCUITest","autoLaunch":true,"clearSystemFiles":true,"wdaLocalPort":"8102"}}
-2022-03-17 10:33:27:359 [W3C] Calling AppiumDriver.createSession() with args: [{"platformName":"iOS","platformVersion":"13.3","deviceName":"测试机02","app":"com.tk.getIdfa.TKIDFA","udid":"e78cdc38581092179c4b3cfc28ade49cea3a1370","noReset":true,"autoAcceptAlerts":true,"newCommandTimeout":600,"automationName":"XCUITest","autoLaunch":true,"clearSystemFiles":true,"wdaLocalPort":"8102"},null,{"alwaysMatch":{"platformName":"iOS","appium:platformVersion":"13.3","appium:deviceName":"测试机02","appium:app":"com.tk.getIdfa.TKIDFA","appium:udid":"e78cdc38581092179c4b3cfc28ade49cea3a1370","appium:noReset":true,"appium:autoAcceptAlerts":true,"appium:newCommandTimeout":600,"appium:automationName":"XCUITest","appium:autoLaunch":true,"appium:clearSystemFiles":true,"appium:wdaLocalPort":"8102"},"firstMatch":[{}]}]
-2022-03-17 10:33:27:360 [BaseDriver] Event 'newSessionRequested' logged at 1647513207360 (18:33:27 GMT+0800 (China Standard Time))
-2022-03-17 10:33:27:858 [Appium] Appium v1.22.2 creating new XCUITestDriver (v3.59.0) session
-2022-03-17 10:33:27:858 [Appium] There are no active sessions for cleanup
-2022-03-17 10:33:27:860 [BaseDriver] W3C capabilities and MJSONWP desired capabilities were provided
-2022-03-17 10:33:27:861 [BaseDriver] Creating session with W3C capabilities: {
-2022-03-17 10:33:27:861 [BaseDriver]   "alwaysMatch": {
-2022-03-17 10:33:27:861 [BaseDriver]     "platformName": "iOS",
-2022-03-17 10:33:27:861 [BaseDriver]     "appium:platformVersion": "13.3",
-2022-03-17 10:33:27:861 [BaseDriver]     "appium:deviceName": "测试机02",
-2022-03-17 10:33:27:861 [BaseDriver]     "appium:app": "com.tk.getIdfa.TKIDFA",
-2022-03-17 10:33:27:861 [BaseDriver]     "appium:udid": "e78cdc38581092179c4b3cfc28ade49cea3a1370",
-2022-03-17 10:33:27:861 [BaseDriver]     "appium:noReset": true,
-2022-03-17 10:33:27:861 [BaseDriver]     "appium:autoAcceptAlerts": true,
-2022-03-17 10:33:27:861 [BaseDriver]     "appium:newCommandTimeout": 600,
-2022-03-17 10:33:27:861 [BaseDriver]     "appium:automationName": "XCUITest",
-2022-03-17 10:33:27:861 [BaseDriver]     "appium:autoLaunch": true,
-2022-03-17 10:33:27:862 [BaseDriver]     "appium:clearSystemFiles": true,
-2022-03-17 10:33:27:862 [BaseDriver]     "appium:wdaLocalPort": "8102"
-2022-03-17 10:33:27:862 [BaseDriver]   },
-2022-03-17 10:33:27:862 [BaseDriver]   "firstMatch": [
-2022-03-17 10:33:27:862 [BaseDriver]     {}
-2022-03-17 10:33:27:862 [BaseDriver]   ]
-2022-03-17 10:33:27:862 [BaseDriver] }
-2022-03-17 10:33:27:864 [BaseDriver] Number capability passed in as string. Functionality may be compromised.
-2022-03-17 10:33:27:867 [BaseDriver] Capability 'wdaLocalPort' changed from string ('8102') to integer (8102). This may cause unexpected behavior
-2022-03-17 10:33:27:870 [BaseDriver] Session created with session id: 50f7cac4-3da4-47e1-8bc9-3ba141ee2789
-2022-03-17 10:33:27:882 [XCUITest] Current user: 'taken'
-2022-03-17 10:33:27:896 [XCUITest] Available devices: 00008101-001A405436C2001E, e78cdc38581092179c4b3cfc28ade49cea3a1370, d6acb3b580c166fc9172ebd5dd2d3f2749ce5c3c
-2022-03-17 10:33:27:896 [XCUITest] Creating iDevice object with udid 'e78cdc38581092179c4b3cfc28ade49cea3a1370'
-2022-03-17 10:33:27:897 [XCUITest] Determining device to run tests on: udid: 'e78cdc38581092179c4b3cfc28ade49cea3a1370', real device: true
-2022-03-17 10:33:27:932 [BaseDriver] Event 'xcodeDetailsRetrieved' logged at 1647513207931 (18:33:27 GMT+0800 (China Standard Time))
-2022-03-17 10:33:27:933 [XCUITest] App is an iOS bundle, will attempt to run as pre-existing
-2022-03-17 10:33:27:933 [BaseDriver] Event 'appConfigured' logged at 1647513207933 (18:33:27 GMT+0800 (China Standard Time))
-2022-03-17 10:33:27:933 [BaseDriver] Event 'resetStarted' logged at 1647513207933 (18:33:27 GMT+0800 (China Standard Time))
-2022-03-17 10:33:27:933 [XCUITest] Reset: fullReset not set. Leaving as is
-2022-03-17 10:33:27:934 [BaseDriver] Event 'resetComplete' logged at 1647513207933 (18:33:27 GMT+0800 (China Standard Time))
-2022-03-17 10:33:27:934 [WebDriverAgent] Using WDA path: '/usr/local/lib/node_modules/appium/node_modules/appium-webdriveragent'
-2022-03-17 10:33:27:935 [WebDriverAgent] Using WDA agent: '/usr/local/lib/node_modules/appium/node_modules/appium-webdriveragent/WebDriverAgent.xcodeproj'
-2022-03-17 10:33:28:183 [XCUITest] Crash reports root '/Users/taken/Library/Logs/CrashReporter/MobileDevice/测试机02' does not exist. Got nothing to gather.
-2022-03-17 10:33:28:184 [BaseDriver] Event 'logCaptureStarted' logged at 1647513208183 (18:33:28 GMT+0800 (China Standard Time))
-2022-03-17 10:33:28:184 [XCUITest] Setting up real device
-2022-03-17 10:33:28:446 [WebDriverAgent] No obsolete cached processes from previous WDA sessions listening on port 8102 have been found
-2022-03-17 10:33:28:447 [DevCon Factory] Requesting connection for device e78cdc38581092179c4b3cfc28ade49cea3a1370 on local port 8102, device port 8102
-2022-03-17 10:33:28:447 [DevCon Factory] Cached connections count: 0
-2022-03-17 10:33:28:451 [DevCon Factory] Successfully requested the connection for e78cdc38581092179c4b3cfc28ade49cea3a1370:8102
-2022-03-17 10:33:28:452 [XCUITest] Starting WebDriverAgent initialization with the synchronization key 'XCUITestDriver'
-2022-03-17 10:33:28:455 [WD Proxy] Matched '/status' to command name 'getStatus'
-2022-03-17 10:33:28:456 [WD Proxy] Proxying [GET /status] to [GET http://127.0.0.1:8102/status] with no body
-2022-03-17 10:33:28:481 [WD Proxy] Got response with status 200: {"value":{"message":"WebDriverAgent is ready to accept commands","state":"success","os":{"testmanagerdVersion":28,"name":"iOS","sdkVersion":"15.0","version":"13.3"},"ios":{"ip":"192.168.31.70"},"ready":true,"build":{"time":"Mar 17 2022 16:44:10","productBundleIdentifier":"com.facebook.WebDriverAgentRunner"}},"sessionId":"16938F3B-6BC7-4A5B-8643-83BCC527E245"}
-2022-03-17 10:33:28:482 [WebDriverAgent] Upgrade timestamp of the currently bundled WDA: 1646812416206
-2022-03-17 10:33:28:482 [WebDriverAgent] Upgrade timestamp of the WDA on the device: undefined
-2022-03-17 10:33:28:482 [WebDriverAgent] Will reuse previously cached WDA instance at 'http://127.0.0.1:8102/' with 'com.facebook.WebDriverAgentRunner'. Set the wdaLocalPort capability to a value different from 8102 if this is an undesired behavior.
-2022-03-17 10:33:28:482 [XCUITest] Trying to start WebDriverAgent 1 times with 10000ms interval
-2022-03-17 10:33:28:482 [XCUITest] These values can be customized by changing wdaStartupRetries/wdaStartupRetryInterval capabilities
-2022-03-17 10:33:28:483 [BaseDriver] Event 'wdaStartAttempted' logged at 1647513208483 (18:33:28 GMT+0800 (China Standard Time))
-2022-03-17 10:33:28:483 [WebDriverAgent] Using provided WebdriverAgent at 'http://127.0.0.1:8102/'
-2022-03-17 10:33:28:484 [WD Proxy] Matched '/status' to command name 'getStatus'
-2022-03-17 10:33:28:484 [WD Proxy] Proxying [GET /status] to [GET http://127.0.0.1:8102/status] with no body
-2022-03-17 10:33:28:493 [WD Proxy] Got response with status 200: {"value":{"message":"WebDriverAgent is ready to accept commands","state":"success","os":{"testmanagerdVersion":28,"name":"iOS","sdkVersion":"15.0","version":"13.3"},"ios":{"ip":"192.168.31.70"},"ready":true,"build":{"time":"Mar 17 2022 16:44:10","productBundleIdentifier":"com.facebook.WebDriverAgentRunner"}},"sessionId":"16938F3B-6BC7-4A5B-8643-83BCC527E245"}
-2022-03-17 10:33:28:494 [BaseDriver] Event 'wdaSessionAttempted' logged at 1647513208494 (18:33:28 GMT+0800 (China Standard Time))
-2022-03-17 10:33:28:494 [XCUITest] Sending createSession command to WDA
-2022-03-17 10:33:28:495 [WD Proxy] Matched '/session' to command name 'createSession'
-2022-03-17 10:33:28:496 [WD Proxy] Proxying [POST /session] to [POST http://127.0.0.1:8102/session] with body: {"capabilities":{"firstMatch":[{"bundleId":"com.tk.getIdfa.TKIDFA","arguments":[],"environment":{},"eventloopIdleDelaySec":0,"shouldWaitForQuiescence":true,"shouldUseTestManagerForVisibilityDetection":false,"maxTypingFrequency":60,"shouldUseSingletonTestManager":true,"shouldTerminateApp":false,"forceAppLaunch":false,"useNativeCachingStrategy":true,"forceSimulatorSoftwareKeyboardPresence":true,"defaultAlertAction":"accept"}],"alwaysMatch":{}}}
-2022-03-17 10:33:29:929 [WD Proxy] Got response with status 200: {"value":{"sessionId":"BFE6358B-DFB6-440C-ACC5-79B6268ACF70","capabilities":{"device":"iphone","browserName":"TKIDFA","sdkVersion":"13.3","CFBundleIdentifier":"com.tk.getIdfa.TKIDFA"}},"sessionId":"BFE6358B-DFB6-440C-ACC5-79B6268ACF70"}
-2022-03-17 10:33:29:930 [WD Proxy] Determined the downstream protocol as 'W3C'
-2022-03-17 10:33:29:930 [BaseDriver] Event 'wdaSessionStarted' logged at 1647513209930 (18:33:29 GMT+0800 (China Standard Time))
-2022-03-17 10:33:30:873 [WebDriverAgent] Parsed BUILD_DIR configuration value: '/Users/taken/Library/Developer/Xcode/DerivedData/WebDriverAgent-ciegwgvxzxdrqthilmrmczmqvrgu/Build/Products'
-2022-03-17 10:33:30:873 [WebDriverAgent] Got derived data root: '/Users/taken/Library/Developer/Xcode/DerivedData/WebDriverAgent-ciegwgvxzxdrqthilmrmczmqvrgu'
-2022-03-17 10:33:30:874 [BaseDriver] Event 'wdaStarted' logged at 1647513210874 (18:33:30 GMT+0800 (China Standard Time))
-2022-03-17 10:33:30:874 [XCUITest] Skipping setting of the initial display orientation. Set the "orientation" capability to either "LANDSCAPE" or "PORTRAIT", if this is an undesired behavior.
-2022-03-17 10:33:30:874 [BaseDriver] Event 'orientationSet' logged at 1647513210874 (18:33:30 GMT+0800 (China Standard Time))
-2022-03-17 10:33:30:875 [BaseDriver] The value of 'elementResponseAttributes' setting did not change. Skipping the update for it
-2022-03-17 10:33:30:875 [BaseDriver] The value of 'shouldUseCompactResponses' setting did not change. Skipping the update for it
-2022-03-17 10:33:30:875 [Appium] New XCUITestDriver session created successfully, session 50f7cac4-3da4-47e1-8bc9-3ba141ee2789 added to master session list
-2022-03-17 10:33:30:876 [BaseDriver] Event 'newSessionStarted' logged at 1647513210876 (18:33:30 GMT+0800 (China Standard Time))
-2022-03-17 10:33:30:877 [W3C (50f7cac4)] Cached the protocol value 'W3C' for the new session 50f7cac4-3da4-47e1-8bc9-3ba141ee2789
-2022-03-17 10:33:30:877 [W3C (50f7cac4)] Responding to client with driver.createSession() result: {"capabilities":{"webStorageEnabled":false,"locationContextEnabled":false,"browserName":"","platform":"MAC","javascriptEnabled":true,"databaseEnabled":false,"takesScreenshot":true,"networkConnectionEnabled":false,"platformName":"iOS","platformVersion":"13.3","deviceName":"测试机02","app":"com.tk.getIdfa.TKIDFA","udid":"e78cdc38581092179c4b3cfc28ade49cea3a1370","noReset":true,"autoAcceptAlerts":true,"newCommandTimeout":600,"automationName":"XCUITest","autoLaunch":true,"clearSystemFiles":true,"wdaLocalPort":8102}}
-2022-03-17 10:33:30:881 [HTTP] <-- POST /wd/hub/session 200 3523 ms - 581
-2022-03-17 10:33:30:881 [HTTP] 
-2022-03-17 10:33:30:884 [HTTP] --> POST /wd/hub/session/50f7cac4-3da4-47e1-8bc9-3ba141ee2789/appium/device/app_installed
-2022-03-17 10:33:30:884 [HTTP] {"bundleId":"com.lxkj.youji"}
-2022-03-17 10:33:30:891 [W3C (50f7cac4)] Calling AppiumDriver.isAppInstalled() with args: ["com.lxkj.youji","50f7cac4-3da4-47e1-8bc9-3ba141ee2789"]
-2022-03-17 10:33:30:892 [XCUITest] Executing command 'isAppInstalled'
-2022-03-17 10:33:31:070 [XCUITest] App 'com.lxkj.youji' is not installed
-2022-03-17 10:33:31:072 [W3C (50f7cac4)] Responding to client with driver.isAppInstalled() result: false
-2022-03-17 10:33:31:074 [HTTP] <-- POST /wd/hub/session/50f7cac4-3da4-47e1-8bc9-3ba141ee2789/appium/device/app_installed 200 188 ms - 15
-2022-03-17 10:33:31:075 [HTTP] 
-2022-03-17 10:33:31:078 [HTTP] --> POST /wd/hub/session/50f7cac4-3da4-47e1-8bc9-3ba141ee2789/element
-2022-03-17 10:33:31:079 [HTTP] {"using":"name","value":"idfalabIdentifier"}
-2022-03-17 10:33:31:080 [W3C (50f7cac4)] Calling AppiumDriver.findElement() with args: ["name","idfalabIdentifier","50f7cac4-3da4-47e1-8bc9-3ba141ee2789"]
-2022-03-17 10:33:31:080 [XCUITest] Executing command 'findElement'
-2022-03-17 10:33:31:081 [BaseDriver] Valid locator strategies for this request: xpath, id, name, class name, -ios predicate string, -ios class chain, accessibility id, css selector
-2022-03-17 10:33:31:082 [BaseDriver] Waiting up to 0 ms for condition
-2022-03-17 10:33:31:086 [WD Proxy] Matched '/element' to command name 'findElement'
-2022-03-17 10:33:31:086 [WD Proxy] Proxying [POST /element] to [POST http://127.0.0.1:8102/session/BFE6358B-DFB6-440C-ACC5-79B6268ACF70/element] with body: {"using":"name","value":"idfalabIdentifier"}
-2022-03-17 10:33:31:173 [WD Proxy] Got response with status 200: {"value":{"ELEMENT":"0E000000-0000-0000-641D-000000000000","element-6066-11e4-a52e-4f735466cecf":"0E000000-0000-0000-641D-000000000000"},"sessionId":"BFE6358B-DFB6-440C-ACC5-79B6268ACF70"}
-2022-03-17 10:33:31:174 [W3C (50f7cac4)] Responding to client with driver.findElement() result: {"element-6066-11e4-a52e-4f735466cecf":"0E000000-0000-0000-641D-000000000000","ELEMENT":"0E000000-0000-0000-641D-000000000000"}
-2022-03-17 10:33:31:175 [HTTP] <-- POST /wd/hub/session/50f7cac4-3da4-47e1-8bc9-3ba141ee2789/element 200 96 ms - 137
-2022-03-17 10:33:31:175 [HTTP] 
-2022-03-17 10:33:31:180 [HTTP] --> GET /wd/hub/session/50f7cac4-3da4-47e1-8bc9-3ba141ee2789/element/0E000000-0000-0000-641D-000000000000/text
-2022-03-17 10:33:31:180 [HTTP] {}
-2022-03-17 10:33:31:181 [W3C (50f7cac4)] Driver proxy active, passing request on via HTTP proxy
-2022-03-17 10:33:31:181 [XCUITest] Executing command 'proxyReqRes'
-2022-03-17 10:33:31:183 [WD Proxy] Matched '/wd/hub/session/50f7cac4-3da4-47e1-8bc9-3ba141ee2789/element/0E000000-0000-0000-641D-000000000000/text' to command name 'getText'
-2022-03-17 10:33:31:183 [WD Proxy] Proxying [GET /wd/hub/session/50f7cac4-3da4-47e1-8bc9-3ba141ee2789/element/0E000000-0000-0000-641D-000000000000/text] to [GET http://127.0.0.1:8102/session/BFE6358B-DFB6-440C-ACC5-79B6268ACF70/element/0E000000-0000-0000-641D-000000000000/text] with no body
-2022-03-17 10:33:31:212 [WD Proxy] Got response with status 200: {"value":"2EAD5AEA-6B38-4A9F-8B47-917C172BBDB1","sessionId":"BFE6358B-DFB6-440C-ACC5-79B6268ACF70"}
-2022-03-17 10:33:31:213 [WD Proxy] Replacing sessionId BFE6358B-DFB6-440C-ACC5-79B6268ACF70 with 50f7cac4-3da4-47e1-8bc9-3ba141ee2789
-2022-03-17 10:33:31:215 [HTTP] <-- GET /wd/hub/session/50f7cac4-3da4-47e1-8bc9-3ba141ee2789/element/0E000000-0000-0000-641D-000000000000/text 200 34 ms - 99
-2022-03-17 10:33:31:215 [HTTP] 
-2022-03-17 10:33:31:216 [HTTP] --> POST /wd/hub/session/50f7cac4-3da4-47e1-8bc9-3ba141ee2789/element
-2022-03-17 10:33:31:217 [HTTP] {"using":"name","value":"tk_autoDownloadApp"}
-2022-03-17 10:33:31:217 [W3C (50f7cac4)] Calling AppiumDriver.findElement() with args: ["name","tk_autoDownloadApp","50f7cac4-3da4-47e1-8bc9-3ba141ee2789"]
-2022-03-17 10:33:31:217 [XCUITest] Executing command 'findElement'
-2022-03-17 10:33:31:218 [BaseDriver] Valid locator strategies for this request: xpath, id, name, class name, -ios predicate string, -ios class chain, accessibility id, css selector
-2022-03-17 10:33:31:218 [BaseDriver] Waiting up to 0 ms for condition
-2022-03-17 10:33:31:219 [WD Proxy] Matched '/element' to command name 'findElement'
-2022-03-17 10:33:31:219 [WD Proxy] Proxying [POST /element] to [POST http://127.0.0.1:8102/session/BFE6358B-DFB6-440C-ACC5-79B6268ACF70/element] with body: {"using":"name","value":"tk_autoDownloadApp"}
-2022-03-17 10:33:31:278 [WD Proxy] Got response with status 200: {"value":{"ELEMENT":"0D000000-0000-0000-641D-000000000000","element-6066-11e4-a52e-4f735466cecf":"0D000000-0000-0000-641D-000000000000"},"sessionId":"BFE6358B-DFB6-440C-ACC5-79B6268ACF70"}
-2022-03-17 10:33:31:278 [W3C (50f7cac4)] Responding to client with driver.findElement() result: {"element-6066-11e4-a52e-4f735466cecf":"0D000000-0000-0000-641D-000000000000","ELEMENT":"0D000000-0000-0000-641D-000000000000"}
-2022-03-17 10:33:31:279 [HTTP] <-- POST /wd/hub/session/50f7cac4-3da4-47e1-8bc9-3ba141ee2789/element 200 62 ms - 137
-2022-03-17 10:33:31:279 [HTTP] 
-2022-03-17 10:33:31:282 [HTTP] --> POST /wd/hub/session/50f7cac4-3da4-47e1-8bc9-3ba141ee2789/element/0D000000-0000-0000-641D-000000000000/click
-2022-03-17 10:33:31:282 [HTTP] {"id":"0D000000-0000-0000-641D-000000000000"}
-2022-03-17 10:33:31:283 [W3C (50f7cac4)] Driver proxy active, passing request on via HTTP proxy
-2022-03-17 10:33:31:283 [XCUITest] Executing command 'proxyReqRes'
-2022-03-17 10:33:31:284 [WD Proxy] Matched '/wd/hub/session/50f7cac4-3da4-47e1-8bc9-3ba141ee2789/element/0D000000-0000-0000-641D-000000000000/click' to command name 'click'
-2022-03-17 10:33:31:284 [WD Proxy] Proxying [POST /wd/hub/session/50f7cac4-3da4-47e1-8bc9-3ba141ee2789/element/0D000000-0000-0000-641D-000000000000/click] to [POST http://127.0.0.1:8102/session/BFE6358B-DFB6-440C-ACC5-79B6268ACF70/element/0D000000-0000-0000-641D-000000000000/click] with body: {"id":"0D000000-0000-0000-641D-000000000000"}
-2022-03-17 10:33:31:693 [WD Proxy] Got response with status 200: {"value":null,"sessionId":"BFE6358B-DFB6-440C-ACC5-79B6268ACF70"}
-2022-03-17 10:33:31:694 [WD Proxy] Replacing sessionId BFE6358B-DFB6-440C-ACC5-79B6268ACF70 with 50f7cac4-3da4-47e1-8bc9-3ba141ee2789
-2022-03-17 10:33:31:695 [HTTP] <-- POST /wd/hub/session/50f7cac4-3da4-47e1-8bc9-3ba141ee2789/element/0D000000-0000-0000-641D-000000000000/click 200 412 ms - 65
-2022-03-17 10:33:31:695 [HTTP] 
-2022-03-17 10:33:34:705 [HTTP] --> POST /wd/hub/session/50f7cac4-3da4-47e1-8bc9-3ba141ee2789/element
-2022-03-17 10:33:34:706 [HTTP] {"using":"name","value":"重新下载"}
-2022-03-17 10:33:34:706 [W3C (50f7cac4)] Calling AppiumDriver.findElement() with args: ["name","重新下载","50f7cac4-3da4-47e1-8bc9-3ba141ee2789"]
-2022-03-17 10:33:34:707 [XCUITest] Executing command 'findElement'
-2022-03-17 10:33:34:707 [BaseDriver] Valid locator strategies for this request: xpath, id, name, class name, -ios predicate string, -ios class chain, accessibility id, css selector
-2022-03-17 10:33:34:707 [BaseDriver] Waiting up to 0 ms for condition
-2022-03-17 10:33:34:711 [WD Proxy] Matched '/element' to command name 'findElement'
-2022-03-17 10:33:34:712 [WD Proxy] Proxying [POST /element] to [POST http://127.0.0.1:8102/session/BFE6358B-DFB6-440C-ACC5-79B6268ACF70/element] with body: {"using":"name","value":"重新下载"}
-2022-03-17 10:33:34:949 [WD Proxy] Got response with status 404: {"value":{"error":"no such element","message":"unable to find an element using 'name', value '重新下载'","traceback":"(\n\t0   WebDriverAgentLib                   0x0000000104e8100c FBNoSuchElementErrorResponseForRequest + 288\n\t1   WebDriverAgentLib                   0x0000000104e80e10 +[FBFindElementCommands handleFindElement:] + 344\n\t2   WebDriverAgentLib                   0x0000000104e49674 -[FBRoute_TargetAction mountRequest:intoResponse:] + 180\n\t3   WebDriverAgentLib                   0x0000000104e35f04 __37-[FBWebServer registerRouteHandlers:]_block_invoke + 424\n\t4   WebDriverAgentLib                   0x0000000104e69930 -[RoutingHTTPServer handleRoute:withRequest:response:] + 164\n\t5   WebDriverAgentLib                   0x0000000104e6a3b4 __72-[RoutingHTTPServer routeMethod:withPath:parameters:request:connection:]_block_invoke + 64\n\t6   libdispatch.dylib                   0x000000019a6c3184 A3849F96-1C9F-36C5-A15F-70C566F14CFF + 377220\n\t7   libdispatch.dylib                   0x000000019a6...
-2022-03-17 10:33:34:953 [W3C] Matched W3C error code 'no such element' to NoSuchElementError
-2022-03-17 10:33:34:965 [W3C (50f7cac4)] Encountered internal error running command: NoSuchElementError: An element could not be located on the page using the given search parameters.
-2022-03-17 10:33:34:965 [W3C (50f7cac4)]     at XCUITestDriver.doNativeFind (/usr/local/lib/node_modules/appium/node_modules/appium-xcuitest-driver/lib/commands/find.js:130:11)
-2022-03-17 10:33:34:965 [W3C (50f7cac4)]     at runMicrotasks (<anonymous>)
-2022-03-17 10:33:34:965 [W3C (50f7cac4)]     at processTicksAndRejections (internal/process/task_queues.js:97:5)
-2022-03-17 10:33:34:967 [HTTP] <-- POST /wd/hub/session/50f7cac4-3da4-47e1-8bc9-3ba141ee2789/element 404 262 ms - 488
-2022-03-17 10:33:34:967 [HTTP] 
+2022-03-18 09:12:23:335 [Appium] Welcome to Appium v1.22.2
+2022-03-18 09:12:23:336 [Appium] Non-default server args:
+2022-03-18 09:12:23:337 [Appium]   address: 127.0.0.1
+2022-03-18 09:12:23:337 [Appium]   port: 4725
+2022-03-18 09:12:23:337 [Appium]   sessionOverride: true
+2022-03-18 09:12:23:337 [Appium]   logFile: ./serverlogs/e78cdc38581092179c4b3cfc28ade49cea3a1370.log
+2022-03-18 09:12:23:337 [Appium]   udid: e78cdc38581092179c4b3cfc28ade49cea3a1370
+2022-03-18 09:12:23:338 [Appium] Deprecated server args:
+2022-03-18 09:12:23:338 [Appium]   -U => --default-capabilities
+2022-03-18 09:12:23:338 [Appium] Default capabilities, which will be added to each request unless overridden by desired capabilities:
+2022-03-18 09:12:23:338 [Appium]   udid: e78cdc38581092179c4b3cfc28ade49cea3a1370
+2022-03-18 09:12:23:354 [Appium] Appium REST http interface listener started on 127.0.0.1:4725
+2022-03-18 09:12:23:539 [HTTP] Request idempotency key: d2f296cf-8f30-48eb-a406-bd14ef3baeb0
+2022-03-18 09:12:23:564 [HTTP] --> POST /wd/hub/session
+2022-03-18 09:12:23:565 [HTTP] {"capabilities":{"alwaysMatch":{"platformName":"iOS","appium:platformVersion":"13.3","appium:deviceName":"测试机02","appium:app":"com.tk.getIdfa.TKIDFA","appium:udid":"e78cdc38581092179c4b3cfc28ade49cea3a1370","appium:noReset":true,"appium:newCommandTimeout":600,"appium:automationName":"XCUITest","appium:autoLaunch":true,"appium:clearSystemFiles":true,"appium:wdaLocalPort":"8102"},"firstMatch":[{}]},"desiredCapabilities":{"platformName":"iOS","platformVersion":"13.3","deviceName":"测试机02","app":"com.tk.getIdfa.TKIDFA","udid":"e78cdc38581092179c4b3cfc28ade49cea3a1370","noReset":true,"newCommandTimeout":600,"automationName":"XCUITest","autoLaunch":true,"clearSystemFiles":true,"wdaLocalPort":"8102"}}
+2022-03-18 09:12:23:567 [W3C] Calling AppiumDriver.createSession() with args: [{"platformName":"iOS","platformVersion":"13.3","deviceName":"测试机02","app":"com.tk.getIdfa.TKIDFA","udid":"e78cdc38581092179c4b3cfc28ade49cea3a1370","noReset":true,"newCommandTimeout":600,"automationName":"XCUITest","autoLaunch":true,"clearSystemFiles":true,"wdaLocalPort":"8102"},null,{"alwaysMatch":{"platformName":"iOS","appium:platformVersion":"13.3","appium:deviceName":"测试机02","appium:app":"com.tk.getIdfa.TKIDFA","appium:udid":"e78cdc38581092179c4b3cfc28ade49cea3a1370","appium:noReset":true,"appium:newCommandTimeout":600,"appium:automationName":"XCUITest","appium:autoLaunch":true,"appium:clearSystemFiles":true,"appium:wdaLocalPort":"8102"},"firstMatch":[{}]}]
+2022-03-18 09:12:23:568 [BaseDriver] Event 'newSessionRequested' logged at 1647594743567 (17:12:23 GMT+0800 (China Standard Time))
+2022-03-18 09:12:24:093 [Appium] Appium v1.22.2 creating new XCUITestDriver (v3.59.0) session
+2022-03-18 09:12:24:093 [Appium] There are no active sessions for cleanup
+2022-03-18 09:12:24:095 [BaseDriver] W3C capabilities and MJSONWP desired capabilities were provided
+2022-03-18 09:12:24:095 [BaseDriver] Creating session with W3C capabilities: {
+2022-03-18 09:12:24:096 [BaseDriver]   "alwaysMatch": {
+2022-03-18 09:12:24:096 [BaseDriver]     "platformName": "iOS",
+2022-03-18 09:12:24:096 [BaseDriver]     "appium:platformVersion": "13.3",
+2022-03-18 09:12:24:096 [BaseDriver]     "appium:deviceName": "测试机02",
+2022-03-18 09:12:24:096 [BaseDriver]     "appium:app": "com.tk.getIdfa.TKIDFA",
+2022-03-18 09:12:24:096 [BaseDriver]     "appium:udid": "e78cdc38581092179c4b3cfc28ade49cea3a1370",
+2022-03-18 09:12:24:096 [BaseDriver]     "appium:noReset": true,
+2022-03-18 09:12:24:096 [BaseDriver]     "appium:newCommandTimeout": 600,
+2022-03-18 09:12:24:096 [BaseDriver]     "appium:automationName": "XCUITest",
+2022-03-18 09:12:24:096 [BaseDriver]     "appium:autoLaunch": true,
+2022-03-18 09:12:24:096 [BaseDriver]     "appium:clearSystemFiles": true,
+2022-03-18 09:12:24:096 [BaseDriver]     "appium:wdaLocalPort": "8102"
+2022-03-18 09:12:24:096 [BaseDriver]   },
+2022-03-18 09:12:24:096 [BaseDriver]   "firstMatch": [
+2022-03-18 09:12:24:097 [BaseDriver]     {}
+2022-03-18 09:12:24:097 [BaseDriver]   ]
+2022-03-18 09:12:24:097 [BaseDriver] }
+2022-03-18 09:12:24:099 [BaseDriver] Number capability passed in as string. Functionality may be compromised.
+2022-03-18 09:12:24:101 [BaseDriver] Capability 'wdaLocalPort' changed from string ('8102') to integer (8102). This may cause unexpected behavior
+2022-03-18 09:12:24:103 [BaseDriver] Session created with session id: fa44712b-4603-45bc-838f-d2789223287a
+2022-03-18 09:12:24:120 [XCUITest] Current user: 'taken'
+2022-03-18 09:12:24:133 [XCUITest] Available devices: e78cdc38581092179c4b3cfc28ade49cea3a1370, d6acb3b580c166fc9172ebd5dd2d3f2749ce5c3c
+2022-03-18 09:12:24:133 [XCUITest] Creating iDevice object with udid 'e78cdc38581092179c4b3cfc28ade49cea3a1370'
+2022-03-18 09:12:24:133 [XCUITest] Determining device to run tests on: udid: 'e78cdc38581092179c4b3cfc28ade49cea3a1370', real device: true
+2022-03-18 09:12:24:200 [BaseDriver] Event 'xcodeDetailsRetrieved' logged at 1647594744199 (17:12:24 GMT+0800 (China Standard Time))
+2022-03-18 09:12:24:201 [XCUITest] App is an iOS bundle, will attempt to run as pre-existing
+2022-03-18 09:12:24:201 [BaseDriver] Event 'appConfigured' logged at 1647594744201 (17:12:24 GMT+0800 (China Standard Time))
+2022-03-18 09:12:24:201 [BaseDriver] Event 'resetStarted' logged at 1647594744201 (17:12:24 GMT+0800 (China Standard Time))
+2022-03-18 09:12:24:201 [XCUITest] Reset: fullReset not set. Leaving as is
+2022-03-18 09:12:24:202 [BaseDriver] Event 'resetComplete' logged at 1647594744201 (17:12:24 GMT+0800 (China Standard Time))
+2022-03-18 09:12:24:203 [WebDriverAgent] Using WDA path: '/usr/local/lib/node_modules/appium/node_modules/appium-webdriveragent'
+2022-03-18 09:12:24:203 [WebDriverAgent] Using WDA agent: '/usr/local/lib/node_modules/appium/node_modules/appium-webdriveragent/WebDriverAgent.xcodeproj'
+2022-03-18 09:12:24:485 [XCUITest] Crash reports root '/Users/taken/Library/Logs/CrashReporter/MobileDevice/测试机02' does not exist. Got nothing to gather.
+2022-03-18 09:12:24:486 [BaseDriver] Event 'logCaptureStarted' logged at 1647594744485 (17:12:24 GMT+0800 (China Standard Time))
+2022-03-18 09:12:24:486 [XCUITest] Setting up real device
+2022-03-18 09:12:24:747 [WebDriverAgent] No obsolete cached processes from previous WDA sessions listening on port 8102 have been found
+2022-03-18 09:12:24:749 [DevCon Factory] Requesting connection for device e78cdc38581092179c4b3cfc28ade49cea3a1370 on local port 8102, device port 8102
+2022-03-18 09:12:24:749 [DevCon Factory] Cached connections count: 0
+2022-03-18 09:12:24:751 [DevCon Factory] Port #8102 is busy. Did you quit the previous driver session(s) properly?
+2022-03-18 09:12:24:751 [XCUITest] {}
+2022-03-18 09:12:24:753 [DevCon Factory] Releasing connections for e78cdc38581092179c4b3cfc28ade49cea3a1370 device on any port number
+2022-03-18 09:12:24:753 [DevCon Factory] No cached connections have been found
+2022-03-18 09:13:09:539 [Appium] Received SIGINT - shutting down

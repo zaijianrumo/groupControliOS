@@ -6,11 +6,10 @@ import multiprocessing
 import unittest
 from TKIOSAutoDownLoadApp.baseConfg.tk_baseAppiumServer import *
 from TKIOSAutoDownLoadApp.baseConfg.tk_desired_capabilities import *
+from openpyxl import load_workbook, Workbook
 
 # # 构建desired进程组
 desired_process = []
-
-
 def runnerPool(getDevices):
     for i in range(0, len(getDevices)):
         udid = getDevices[i]['udid']
