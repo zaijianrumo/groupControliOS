@@ -7,9 +7,13 @@ import unittest
 from TKIOSAutoDownLoadApp.baseConfg.tk_baseAppiumServer import *
 from TKIOSAutoDownLoadApp.baseConfg.tk_desired_capabilities import *
 from openpyxl import load_workbook, Workbook
+import requests
+from TKIOSAutoDownLoadApp.config import init
 
 # # 构建desired进程组
 desired_process = []
+
+
 def runnerPool(getDevices):
     for i in range(0, len(getDevices)):
         udid = getDevices[i]['udid']
@@ -32,18 +36,23 @@ if __name__ == '__main__':
     with open(dev_iOS, encoding='utf-8') as stream:
         try:
             init_args = yaml.load(stream, Loader=yaml.Loader)
+            tk_common = init_args["tk_common"]
             print(init_args)
+            init(tk_common["downLoadlink"],
+                 tk_common["app_bundle_id"],
+                 tk_common["app_report_link"],
+                 tk_common["app_report_flag"])
         except Exception as e:
             print(e)
-    if len(init_args) > 0:
+
+    if len(init_args["devies_info"]) > 0:
         infos = []
-        for dev in init_args:
+        for dev in init_args["devies_info"]:
             app = {}
             app["udid"] = dev["udid"]
             app["port"] = dev["port"]
             app["wdaPort"] = dev["wdaport"]
             infos.append(app)
-
         appiumServier = AppiumServer(infos)
         appiumServier.start_server()
         runnerPool(infos)
